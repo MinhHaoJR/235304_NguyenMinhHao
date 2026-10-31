@@ -74,3 +74,10 @@ docker push mhaojr/frontend
 ## Render web-235304
 
 https://web-235304.onrender.com
+
+## Render api-235304
+
+https://api-235304.onrender.com
+
+- GET `/` hoặc `/api/devices`: lấy danh sách thiết bị.
+- GET `/health`: kiểm tra backend và kết nối MongoDB.

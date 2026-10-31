@@ -15,6 +15,11 @@ const allowedOrigins = (process.env.CLIENT_ORIGIN || "")
 app.use(cors({ origin: allowedOrigins.length ? allowedOrigins : "*" }));
 app.use(express.json({ limit: "1mb" }));
 
+app.get("/", async (req, res) => {
+  const devices = await Device.find().sort({ createdAt: -1 });
+  return res.json(devices);
+});
+
 app.get("/health", (req, res) => {
   const connected = mongoose.connection.readyState === 1;
   return res.status(connected ? 200 : 503).json({
