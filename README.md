@@ -43,6 +43,28 @@ Kiểm tra http://localhost:3000/health. Khi chạy container hoặc triển kha
 docker push mhaojr/backend
 ~~~
 
+## Docker frontend
+
+Build image frontend từ thư mục gốc của dự án:
+
+~~~powershell
+docker build -t mhaojr/frontend ./frontend
+~~~
+
+Chạy frontend container tại http://localhost:8080:
+
+~~~powershell
+docker run --rm --name frontend-235304 -p 8080:80 -e API_BASE_URL=http://localhost:3000 mhaojr/frontend
+~~~
+
+Trong môi trường triển khai, đặt API_BASE_URL thành URL backend Render thực tế, không thêm /api/devices. Cấu hình CLIENT_ORIGIN của backend thành URL frontend thực tế để bật CORS. Khi kiểm tra local trên cổng 8080, thêm http://localhost:8080 vào CLIENT_ORIGIN.
+
+Đẩy image lên Docker Hub sau khi đăng nhập tài khoản mhaojr:
+
+~~~powershell
+docker push mhaojr/frontend
+~~~
+
 ## MongoDB Atlas
 - Database: 235304_NguyenMinhHao
 - Collection: devices
