@@ -17,3 +17,9 @@ Sau khi hoàn thiện các phần backend và frontend:
 1. Tạo backend/.env từ backend/.env.example và điền thông tin kết nối MongoDB Atlas.
 2. Chạy backend bằng npm install và npm run dev trong thư mục backend.
 3. Chạy frontend bằng npm install và npm run dev trong thư mục frontend.
+
+## MongoDB Atlas
+- Database: 235304_NguyenMinhHao
+- Collection: devices
+- Tạo backend/.env từ backend/.env.example và điền URI Atlas.
+- Không commit backend/.env hoặc thông tin xác thực.
