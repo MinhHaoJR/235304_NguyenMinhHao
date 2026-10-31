@@ -81,3 +81,14 @@ https://api-235304.onrender.com
 
 - GET `/` hoặc `/api/devices`: lấy danh sách thiết bị.
 - GET `/health`: kiểm tra backend và kết nối MongoDB.
+
+## Thông tin nộp bài
+
+| Hạng mục | Link hoặc thông tin |
+|---|---|
+| GitHub | https://github.com/MinhHaoJR/235304_NguyenMinhHao |
+| Docker Hub backend | https://hub.docker.com/r/mhaojr/backend |
+| Docker Hub frontend | https://hub.docker.com/r/mhaojr/frontend |
+| Render frontend | https://web-235304.onrender.com |
+| Render backend API | https://api-235304.onrender.com |
+| MongoDB Atlas | Database: `235304_NguyenMinhHao`; collection: `devices` |
