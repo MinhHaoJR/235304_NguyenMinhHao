@@ -70,3 +70,7 @@ docker push mhaojr/frontend
 - Collection: devices
 - Tạo backend/.env từ backend/.env.example và điền URI Atlas.
 - Không commit backend/.env hoặc thông tin xác thực.
+
+## Render web-235304
+
+https://web-235304.onrender.com
