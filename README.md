@@ -16,7 +16,10 @@ Sau khi hoàn thiện các phần backend và frontend:
 
 1. Tạo backend/.env từ backend/.env.example và điền thông tin kết nối MongoDB Atlas.
 2. Chạy backend bằng npm install và npm run dev trong thư mục backend.
-3. Chạy frontend bằng npm install và npm run dev trong thư mục frontend.
+3. Tạo frontend/.env từ frontend/.env.example. Khi chạy local, đặt VITE_API_BASE_URL=http://localhost:3000.
+4. Chạy frontend bằng npm install và npm run dev trong thư mục frontend.
+
+Khi triển khai frontend, cấu hình VITE_API_BASE_URL thành URL backend Render thực tế sau khi dịch vụ backend được tạo. Không thêm đường dẫn /api/devices vào giá trị này.
 
 ## MongoDB Atlas
 - Database: 235304_NguyenMinhHao
