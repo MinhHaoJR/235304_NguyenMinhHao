@@ -21,6 +21,28 @@ Sau khi hoàn thiện các phần backend và frontend:
 
 Khi triển khai frontend, cấu hình VITE_API_BASE_URL thành URL backend Render thực tế sau khi dịch vụ backend được tạo. Không thêm đường dẫn /api/devices vào giá trị này.
 
+## Docker backend
+
+Build image backend từ thư mục gốc của dự án:
+
+~~~powershell
+docker build -t mhaojr/backend ./backend
+~~~
+
+Chạy container local bằng cấu hình trong backend/.env. Tệp này chỉ tồn tại trên máy local và không được đưa vào image hoặc GitHub:
+
+~~~powershell
+docker run --rm --name backend-235304 -p 3000:3000 --env-file backend/.env mhaojr/backend
+~~~
+
+Kiểm tra http://localhost:3000/health. Khi chạy container hoặc triển khai, truyền MONGODB_URI, MONGODB_DB, PORT và CLIENT_ORIGIN qua biến môi trường. Không đặt URI MongoDB hoặc thông tin xác thực trong Dockerfile hay image.
+
+Đẩy image lên Docker Hub sau khi đăng nhập tài khoản mhaojr:
+
+~~~powershell
+docker push mhaojr/backend
+~~~
+
 ## MongoDB Atlas
 - Database: 235304_NguyenMinhHao
 - Collection: devices
